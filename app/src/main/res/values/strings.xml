@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">FirstAssignment</string>
+    <string name="app_name">ClickCount</string>
+    <string name="constnumber">0</string>
 </resources>

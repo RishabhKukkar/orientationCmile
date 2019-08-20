@@ -38,8 +38,8 @@ public class MainActivity extends AppCompatActivity {
             setTextview4(common.backgroundCount);
             setTextview2(common.counter);
         } else {
-            setTextview2(0);
-            setTextview4(0);
+            setTextview2(Integer.parseInt(getString(R.string.constnumber)));
+            setTextview4(Integer.parseInt(getString(R.string.constnumber)));
         }
 
         bt_Click.setOnClickListener(new View.OnClickListener() {

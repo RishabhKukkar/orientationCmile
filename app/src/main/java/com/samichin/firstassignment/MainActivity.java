@@ -6,9 +6,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
 import com.samichin.firstassignment.utils.Common;
+
 import butterknife.BindView;
 import butterknife.ButterKnife;
+
 import static com.samichin.firstassignment.utils.Common.BACKGROUND_TASK;
 import static com.samichin.firstassignment.utils.Common.COUNTER;
 
@@ -70,23 +73,15 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onStop() {
         super.onStop();
-        if (Common.isAppWentToBg) {
-            Common.isAppWentToBg = false;
-            Common.isWindowFocused=false;
-            Toast.makeText(getApplicationContext(), "App is in Background",
-                    Toast.LENGTH_SHORT).show();
-        }
+        Toast.makeText(getApplicationContext(), "App is in Background",
+                Toast.LENGTH_SHORT).show();
+
 
     }
 
     @Override
     protected void onStart() {
-        if (!Common.isWindowFocused) {
-            ++common.backgroundCount;
-            Common.isAppWentToBg = true;
-        }
+        ++common.backgroundCount;
         super.onStart();
-
-
     }
 }
